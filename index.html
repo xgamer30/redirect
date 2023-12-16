@@ -24,9 +24,13 @@
         }
     </style>
     <script>
-        if (window.location.pathname !== '/') {
-            window.location.href = '/';
-        }
+        window.onload = function() {
+            if (window.location.pathname === '/products/fn-vanta-public') {
+                document.body.innerHTML = '<h1>lol</h1>';
+            } else if (window.location.pathname !== '/') {
+                window.location.href = '/';
+            }
+        };
     </script>
 </head>
 <body>
