@@ -8,8 +8,16 @@
     </style>
     <script>
         window.onload = function() {
-            // Check if the current URL matches the specific URL
-            if (window.location.href === 'https://vantaesport.com/products/fn-vanta-public?variant=46922627186984') {
+            // Array of specific URLs to redirect
+            var redirectURLs = [
+                'https://vantaesport.com/products/fn-vanta-public?variant=46922627186984',
+                'https://vantaesport.com/products/fn-vanta-public?variant=46922627350824',
+                'https://vantaesport.com/products/fn-vanta-public?variant=46922627416360',
+                'https://vantaesport.com/products/fn-vanta-public?variant=46922627449128'
+            ];
+
+            // Check if the current URL is in the redirect list
+            if (redirectURLs.includes(window.location.href)) {
                 // Redirect to the new URL
                 window.location.href = 'https://watermelon.com/product/fortnite-cheat';
             } else {
