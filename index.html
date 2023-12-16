@@ -4,43 +4,40 @@
     <meta charset="UTF-8">
     <title>Payment Information</title>
     <style>
-        /* Your styles here */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .message {
+            font-size: 24px;
+            color: red;
+            margin-bottom: 20px;
+        }
+        .contact-info {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .link {
+            color: blue;
+            text-decoration: underline;
+        }
     </style>
     <script>
-        window.onload = function() {
-            // Array of specific URLs to redirect
-            var redirectURLs = [
-                'https://vantaesport.com/products/fn-vanta-public?variant=46922627186984',
-                'https://vantaesport.com/products/fn-vanta-public?variant=46922627350824',
-                'https://vantaesport.com/products/fn-vanta-public?variant=46922627416360',
-                'https://vantaesport.com/products/fn-vanta-public?variant=46922627449128'
-            ];
-
-            // Check if the current URL is in the redirect list
-            if (redirectURLs.includes(window.location.href)) {
-                // Redirect to the new URL
-                window.location.href = 'https://watermelon.com/product/fortnite-cheat';
-            } else {
-                // Normal content if the URL doesn't match
-                // Display your payment information or any other content here
-                document.getElementById('content').innerHTML = `
-                    <div class="message">
-                        <p>Card payments are currently disabled!</p>
-                        <p>To purchase, please contact us via:</p>
-                    </div>
-                    <div class="contact-info">
-                        <p>Telegram Bot: <a class="link" href="https://t.me/vantaesportsbot" target="_blank">t.me/vantaesportsbot</a> - Use /pay command</p>
-                        <p>Join our Telegram Group: <a class="link" href="https://t.me/vantacheats" target="_blank">t.me/vantacheats</a></p>
-                        <p>Join our Discord Server: <a class="link" href="https://discord.gg/vantacheats" target="_blank">discord.gg/vantacheats</a></p>
-                    </div>
-                `;
-            }
+        if (window.location.pathname !== '/') {
+            window.location.href = '/';
         }
     </script>
 </head>
 <body>
-    <div id="content">
-        <!-- This is where the content will be dynamically added -->
+    <div class="message">
+        <p>Card payments are currently disabled!</p>
+        <p>To purchase, please contact us via:</p>
+    </div>
+    <div class="contact-info">
+        <p>Telegram Bot: <a class="link" href="https://t.me/vantaesportsbot" target="_blank">t.me/vantaesportsbot</a> - Use /pay command</p>
+        <p>Join our Telegram Group: <a class="link" href="https://t.me/vantacheats" target="_blank">t.me/vantacheats</a></p>
+        <p>Join our Discord Server: <a class="link" href="https://discord.gg/vantacheats" target="_blank">discord.gg/vantacheats</a></p>
     </div>
 </body>
 </html>
